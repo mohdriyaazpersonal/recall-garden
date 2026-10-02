@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Keep trusted notes, create flashcards, and build a gentle spaced review habit."
+    />
+    <title>Recall Garden — make knowledge take root</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to study space</a>
+    <aside>
+      <a class="brand" href="./"
+        ><span>✳</span>
+        <div>recall garden<small>A LITTLE EVERY DAY</small></div></a
+      >
+      <p class="eyebrow">YOUR STUDY SPACE</p>
+      <h2>
+        My decks <button id="new-deck" aria-label="Create deck">+</button>
+      </h2>
+      <nav id="decks" aria-label="Study decks"></nav>
+      <div class="sidebar-note">
+        <span>⌁</span>
+        <p>Knowledge takes root<br />when you return to it.</p>
+      </div>
+      <div class="backup-actions">
+        <button id="export">Export backup ↗</button
+        ><button id="import-button">Import backup</button
+        ><input
+          id="import"
+          type="file"
+          accept="application/json,.json"
+          hidden
+        />
+      </div>
+      <p class="storage-note">
+        Saved in this browser.<br />Keep a backup of important notes.
+      </p>
+    </aside>
+    <main id="main">
+      <header>
+        <span class="breadcrumb">Your garden <span>/</span> Study space</span
+        ><span class="pill">Local & personal</span>
+      </header>
+      <section class="welcome">
+        <p class="eyebrow">MAKE KNOWLEDGE TAKE ROOT</p>
+        <h1>A little practice.<br />A lot more remembered.</h1>
+        <p>
+          Your notes, your cards, your pace. Pick a deck and give the ideas you
+          care about a little attention.
+        </p>
+        <div class="leaf-art" aria-hidden="true">
+          <i></i><i></i><i></i>
+          <div></div>
+        </div>
+      </section>
+      <div id="stats" class="stats"></div>
+      <section id="workspace"></section>
+      <footer>
+        Built with Codex · Independent study tool · Sample decks are editable.
+      </footer>
+    </main>
+    <dialog id="deck-dialog" aria-labelledby="deck-heading">
+      <form id="deck-form">
+        <h2 id="deck-heading">Plant a new deck</h2>
+        <label
+          >Deck name<input
+            name="name"
+            required
+            maxlength="120"
+            placeholder="What are you learning?"
+        /></label>
+        <div class="row">
+          <button class="primary">Create deck</button
+          ><button type="button" data-close>Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="card-dialog" aria-labelledby="card-heading">
+      <form id="card-form">
+        <h2 id="card-heading">Create a flashcard</h2>
+        <label
+          >Question<textarea
+            name="front"
+            required
+            maxlength="2000"
+            placeholder="Ask one clear question"
+          ></textarea></label
+        ><label
+          >Answer<textarea
+            name="back"
+            required
+            maxlength="5000"
+            placeholder="Keep it focused"
+          ></textarea></label
+        ><label
+          >Source excerpt (optional)<textarea
+            name="source"
+            maxlength="5000"
+            placeholder="Copy the sentence you checked against your notes"
+          ></textarea>
+        </label>
+        <p class="muted form-note">
+          You write and verify every card. This app does not generate AI
+          answers.
+        </p>
+        <div class="row">
+          <button class="primary">Save card</button
+          ><button type="button" data-close>Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="review-dialog" aria-labelledby="review-title">
+      <div class="row spread">
+        <p class="eyebrow" id="review-progress"></p>
+        <button id="end-review" aria-label="Close review">×</button>
+      </div>
+      <h2 id="review-title">A moment to remember</h2>
+      <div id="review-card"></div>
+      <div id="review-controls"></div>
+    </dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

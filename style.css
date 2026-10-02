@@ -1,0 +1,495 @@
+:root {
+  --accent: #476c42;
+  --accent-soft: #edf2e8;
+  --muted: #7d8778;
+  --line: #e0e5d9;
+  background: #f8f9f4;
+  color: #303d2e;
+}
+body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+aside {
+  padding: 32px 23px;
+  border-right: 1px solid var(--line);
+  background: #f0f3e9;
+  min-height: 100vh;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  margin-bottom: 55px;
+}
+.brand > span {
+  font-size: 37px;
+  color: #668859;
+}
+.brand small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+  color: #88957e;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.8px;
+}
+aside h2 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 16px;
+}
+#new-deck {
+  padding: 3px 9px;
+  border: 0;
+  background: #e4ead9;
+  font-size: 20px;
+}
+.deck-link {
+  width: 100%;
+  border: 0;
+  background: none;
+  text-align: left;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 14px 10px;
+  margin: 5px 0;
+}
+.deck-link span {
+  overflow-wrap: anywhere;
+}
+.deck-link small {
+  color: #90a083;
+}
+.deck-link[aria-current="page"] {
+  background: #dfe9d7;
+  color: #3b6636;
+}
+.sidebar-note {
+  margin: 70px 0 45px;
+  padding: 24px 12px;
+  border: 1px dashed #cbd5bf;
+  border-radius: 12px;
+  text-align: center;
+  color: #7a8b6e;
+  font-size: 12px;
+}
+.sidebar-note span {
+  font-size: 34px;
+}
+.backup-actions {
+  display: grid;
+  gap: 8px;
+}
+.backup-actions button,
+.backup-actions label {
+  font-size: 11px;
+  background: #f6f8f1;
+}
+.storage-note {
+  font-size: 10px;
+  color: #8e9787;
+  text-align: center;
+}
+main {
+  padding: 0 42px 30px;
+  max-width: 1450px;
+  min-width: 0;
+}
+header {
+  height: 83px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.breadcrumb {
+  font-size: 12px;
+  color: #6c7864;
+}
+.breadcrumb span {
+  margin: 0 10px;
+  color: #afb8a6;
+}
+header .pill {
+  font-size: 10px;
+}
+.welcome {
+  position: relative;
+  padding: 34px 0;
+  min-height: 268px;
+}
+.welcome h1 {
+  font-size: 43px;
+  letter-spacing: -2px;
+  line-height: 1.16;
+  margin: 13px 0;
+}
+.welcome > p:last-of-type {
+  font-size: 13px;
+  max-width: 440px;
+  color: #7c8873;
+}
+.leaf-art {
+  position: absolute;
+  right: 50px;
+  top: 27px;
+  width: 180px;
+  height: 200px;
+}
+.leaf-art div {
+  position: absolute;
+  left: 88px;
+  top: 45px;
+  width: 3px;
+  height: 140px;
+  background: #b0bf9b;
+  transform: rotate(10deg);
+}
+.leaf-art i {
+  position: absolute;
+  width: 72px;
+  height: 105px;
+  top: 20px;
+  left: 30px;
+  border-radius: 95% 0 95% 0;
+  background: #bcccac;
+  transform: rotate(-35deg);
+}
+.leaf-art i:nth-child(2) {
+  left: 88px;
+  top: 47px;
+  transform: rotate(25deg);
+  background: #d7e1c6;
+}
+.leaf-art i:nth-child(3) {
+  left: 33px;
+  top: 111px;
+  width: 52px;
+  height: 72px;
+  transform: rotate(-61deg);
+  background: #e4e8d4;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 10px 0 40px;
+}
+.stats > div {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 23px;
+}
+.stats span,
+.stats small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #87937b;
+}
+.stats strong {
+  display: block;
+  font-family: Manrope;
+  font-size: 34px;
+  margin: 10px 0;
+  color: #46673c;
+}
+.stats small {
+  letter-spacing: 0;
+  font-size: 11px;
+}
+.deck-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 15px;
+}
+.deck-heading h2 {
+  font-size: 25px;
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+}
+.deck-heading button {
+  font-size: 12px;
+}
+.study-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 22px;
+}
+.panel {
+  padding: 24px;
+  box-shadow: none;
+}
+h3 {
+  font-size: 15px;
+  letter-spacing: -0.4px;
+}
+.notes-panel > .row h3 {
+  margin: 0;
+}
+.notes-panel .pill {
+  font-size: 8px;
+}
+.notes-panel > p {
+  font-size: 11px;
+  margin: 18px 0;
+}
+.notes-panel textarea {
+  width: 100%;
+  height: 390px;
+  background: #fcfcf8;
+  border: 1px solid #e8ebdf;
+  font:
+    12px/1.8 ui-monospace,
+    monospace;
+  color: #66735f;
+  padding: 18px;
+}
+.notes-panel > .row:last-child {
+  margin-top: 15px;
+  font-size: 10px;
+}
+.notes-panel button {
+  font-size: 11px;
+}
+.library > .row {
+  margin-bottom: 15px;
+}
+.library > .row h3 {
+  margin: 0;
+}
+.library button {
+  font-size: 11px;
+  padding: 8px 11px;
+}
+#card-search {
+  width: 100%;
+  font-size: 12px;
+}
+.flashcard {
+  border: 1px solid #e6eade;
+  border-radius: 11px;
+  margin-top: 14px;
+  padding: 17px;
+}
+.card-dot {
+  font-size: 9px;
+  color: #76926a;
+}
+.flashcard .row button {
+  border: 0;
+  background: none;
+  padding: 3px;
+  font-size: 10px;
+  color: #7d8e72;
+}
+.flashcard .row {
+  gap: 9px;
+}
+.flashcard h4 {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 12px 0 7px;
+  letter-spacing: 0;
+}
+.flashcard > p {
+  font-size: 11px;
+  color: #829075;
+  margin: 5px 0;
+  white-space: pre-wrap;
+}
+.flashcard details {
+  font-size: 10px;
+  color: #839578;
+  margin-top: 14px;
+}
+.flashcard blockquote {
+  margin: 10px 0;
+  border-left: 2px solid #c9d9bc;
+  padding-left: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+summary {
+  cursor: pointer;
+}
+footer {
+  margin-top: 40px;
+  font-size: 10px;
+}
+.form-note {
+  font-size: 12px;
+}
+.review-face {
+  min-height: 250px;
+  background: #f2f6eb;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+.review-face > p:not(.eyebrow) {
+  font-size: 23px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.review-face blockquote {
+  font-size: 12px;
+  color: #7c8a6c;
+  white-space: pre-wrap;
+}
+.grades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.grades button {
+  display: block;
+  padding: 12px 5px;
+}
+.grades small {
+  display: block;
+  font-size: 8px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #839374;
+}
+#flip {
+  width: 100%;
+}
+#review-controls > p {
+  font-size: 12px;
+}
+.review-done {
+  text-align: center;
+  padding: 50px 15px;
+  font-size: 36px;
+}
+.review-done h3 {
+  font-size: 24px;
+}
+.review-done p {
+  font-size: 13px;
+}
+@media (max-width: 1050px) {
+  body {
+    grid-template-columns: 210px 1fr;
+  }
+  main {
+    padding: 0 25px 25px;
+  }
+  .leaf-art {
+    right: 0;
+    opacity: 0.4;
+  }
+  .welcome {
+    padding-right: 20px;
+  }
+  .study-layout {
+    grid-template-columns: 1fr;
+  }
+  .notes-panel textarea {
+    height: 230px;
+  }
+  .stats {
+    gap: 10px;
+  }
+  .stats > div {
+    padding: 16px;
+  }
+  .stats small {
+    font-size: 9px;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    display: block;
+  }
+  aside {
+    min-height: 0;
+    padding: 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand {
+    margin: 0 0 20px;
+  }
+  .brand small {
+    display: none;
+  }
+  aside > .eyebrow,
+  .sidebar-note,
+  .storage-note {
+    display: none;
+  }
+  aside h2 {
+    margin: 0;
+    font-size: 12px;
+  }
+  #decks {
+    display: flex;
+    gap: 8px;
+    overflow: auto;
+  }
+  .deck-link {
+    min-width: 155px;
+  }
+  .backup-actions {
+    display: flex;
+    margin-top: 10px;
+  }
+  .backup-actions button,
+  .backup-actions label {
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+  main {
+    padding: 0 20px 25px;
+  }
+  header {
+    height: 65px;
+  }
+  .welcome h1 {
+    font-size: 36px;
+  }
+  .leaf-art {
+    display: none;
+  }
+  .stats {
+    margin-bottom: 30px;
+  }
+  .stats span {
+    font-size: 7px;
+  }
+  .stats strong {
+    font-size: 28px;
+  }
+  .stats small {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .deck-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+  .panel {
+    padding: 18px;
+  }
+}
